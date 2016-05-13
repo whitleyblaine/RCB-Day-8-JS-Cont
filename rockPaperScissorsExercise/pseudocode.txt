@@ -1,0 +1,7 @@
+array = [rock, paper, scissors];
+
+variables for player 1 and player 2 choices, and p1 & p2 score
+
+if player1 = rock && player2 = rock
+  then print "Tie!"
+for loop with the condition being how many 
