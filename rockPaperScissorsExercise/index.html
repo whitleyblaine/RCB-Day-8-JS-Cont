@@ -21,14 +21,55 @@ document.onkeyup = function(event) {
     var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 
     // Alerts with user guess
-    alert(userGuess);
 
-    // Create code to randomly choose one of the three options (Computer) 
-    var computerGuess = options[Math.floor(Math.random()*options.length)];
+    if (userGuess == 'r' || userGuess == 's' || userGuess == 'p') {
 
-    // Alerts with Computer guess
-    alert(computerGuess);
+      alert("Your guess: " + userGuess);
 
+      // Create code to randomly choose one of the three options (Computer) 
+      var computerGuess = options[Math.floor(Math.random()*options.length)];
+      alert("Computer's guess: " + computerGuess)
+
+      if (userGuess == 'r' && computerGuess == 'p') {
+        alert("You lose!");
+      }
+
+      else if (userGuess == 'r' && computerGuess == 'r') {
+        alert("Tie!");
+      }
+
+      else if (userGuess == 'r' && computerGuess == 's') {
+        alert('You win!');
+      }
+
+      else if (userGuess == 'p' && computerGuess == 'r') {
+        alert('You win!');
+      }
+
+      else if (userGuess == 'p' && computerGuess == 'p') {
+        alert('Tie!')
+      }
+
+      else if (userGuess == 'p' && computerGuess == 's') {
+        alert('You lose!')
+      }
+
+      else if (userGuess == 's' && computerGuess == 's') {
+        alert('Tie!')
+      }
+
+      else if (userGuess == 's' && computerGuess == 'r') {
+        alert('You lose!')
+      }
+
+      else if (userGuess == 's' && computerGuess == 'p') {
+        alert('You win!')
+      }
+
+      else {
+        alert('Please enter either r, s, or p.')
+      }
+    }
 }
 
 </script>
